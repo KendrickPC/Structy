@@ -4,6 +4,9 @@ No tricks here.
 Run the tests to check your work.
 */
 
+// Time Complexity: O(1);
+// Space Complexity: O(1);
+
 const greet = (s) => {
   return `hey ${s}`;
 };
