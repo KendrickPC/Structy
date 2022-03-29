@@ -9,8 +9,11 @@ The function should return an uncompressed version of the string where each 'cha
 You may assume that the input string is well-formed according to the previously mentioned pattern.
 */
 
-// Time Complexity: O();
-// Space Complexity: O();
+// n = number of groups
+// m = max num found in any group
+// Time: O(n*m)
+// Space: O(n*m)
+
 
 // 1. Create a pointer for i and j and start them both at 0
 // 2. when J is at a alphabetic character, split the difference between i and j. Store that in a variable.
