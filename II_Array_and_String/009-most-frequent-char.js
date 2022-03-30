@@ -11,6 +11,11 @@ You can assume that the input string is non-empty.
 // 2. Loop through the string again. If letter count is greater than maxCount, set letter count to maxCount. Then set maxChar to current letter.
 // 3. Return maxCount and maxChar
 
+// n = length of string 1
+// m = length of string 2
+// Time: O(n + m)
+// Space: O(n)
+
 const mostFrequentChar = (s) => {
   let maxChar = '';
   let maxCount = 0;

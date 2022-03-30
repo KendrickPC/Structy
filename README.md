@@ -18,3 +18,10 @@ Happy Coding y'all!
 - [x] 007-compress.js
 - [x] 008-anagrams.js
 - [x] 009-most-frequent-char.js
+- [x] 010-pair-sum.js
+- [x] 011-pair-product.js
+- [x] 013-intersection.js
+- [x] 014-five-sort.js
+
+### III_Linked_List
+- [] 
