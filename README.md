@@ -24,4 +24,9 @@ Happy Coding y'all!
 - [x] 014-five-sort.js
 
 ### III_Linked_List
-- [] 
+- [x] 019-linked-list-values.js
+- [x] 020-sum-list.js
+- [x] 021-linked-list-find.js
+- [x] 022-get-node-value.js
+- [] 023-reverse-linked-list.js
+
