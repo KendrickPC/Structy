@@ -41,4 +41,9 @@ Happy Coding y'all!
 ### Binary_Tree
 - [] 037-depth-first-values.js
 - [x] 038-breadth-first-values.js
-- [] 039-
+- [x] 039-tree-sum.js
+- [x] 040-tree-includes.js
+- [x] 041-tree-min-value.js
+- [] 042-max-root-to-leaf-path-sum.js
+- [] 043-tree-path-finder.js
+- [] 044-tree-value-count.js
