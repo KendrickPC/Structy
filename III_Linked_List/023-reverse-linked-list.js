@@ -15,6 +15,9 @@ class Node {
 // 5. Move current to placeholder
 // 6. Return new current.
 
+// Time: O(n) because we need to loop through the entire linked list
+// Space: O(1) No storage added. 
+
 const reverseList = (head) => {
   let current = head;
   let previous = null;

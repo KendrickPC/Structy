@@ -29,4 +29,16 @@ Happy Coding y'all!
 - [x] 021-linked-list-find.js
 - [x] 022-get-node-value.js
 - [] 023-reverse-linked-list.js
+- [] 024-zipper-lists.js
+- [] 025-merge-lists.js
+- [x] 026-is-univalue-list.js
+- [x] 027-longest-streak.js
+- [x] 028-remove-node.js
+- [x] 029-insert-node.js
+- [x] 030-create-linked-list.js
+- [x] 031-add-lists.js
 
+### Binary_Tree
+- [] 037-depth-first-values.js
+- [x] 038-breadth-first-values.js
+- [] 039-

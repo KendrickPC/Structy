@@ -19,6 +19,9 @@ class Node {
 // 4. While loop to progress currentNode forward
 // 5. Return null at end of function
 
+// Time: O(n) because we need to loop through the entire linked list
+// Space: O(1) No storage added. 
+
 const getNodeValue = (head, index) => {
   let currentNode = head;
   let currentIdx = 0;
