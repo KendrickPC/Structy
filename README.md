@@ -38,7 +38,7 @@ Happy Coding y'all!
 - [x] 030-create-linked-list.js
 - [x] 031-add-lists.js
 
-### Binary_Tree
+### IV_Binary_Tree
 - [] 037-depth-first-values.js
 - [x] 038-breadth-first-values.js
 - [x] 039-tree-sum.js
@@ -53,4 +53,15 @@ Happy Coding y'all!
 - [] 048-tree-levels.js
 - [x] 049-level-averages.js
 - [x] 050-leaf-list.js
-- [] 
+
+
+### V_Graph
+- [x] 056-has-path.js
+- [] 057-undirected-path.js
+- [x] 058-connected-components-count.js
+- [] 059-largest-component.js
+- [] 060-shortest-path.js *draw this out*
+- [] 061-island-count.js
+- [x] 062-minimum-island.js
+- [] 063-closest-carrot.js
+- [] 064-longest-path.js
