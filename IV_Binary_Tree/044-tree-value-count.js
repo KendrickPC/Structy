@@ -12,8 +12,20 @@ class Node {
   }
 }
 
+// Recursive Approach:
+// 1. Base case of root === null, return 0;
+// x. Create a count variable to keep track of count.
+// 2. root.val === target, count += 1;
+// 3. Recursive calls to root.left and root.right.
+// 4. return count + root.left recursive calls + root.right recursive calls
+
 const treeValueCount = (root, target) => {
-  
+  let count = 0;
+  if (root === null) return 0;
+  if (root.val === target) count += 1;
+  const leftValues = treeValueCount(root.left, target);
+  const rightValues = treeValueCount(root.right, target);
+  return count + leftValues + rightValues;
 };
 
 const a = new Node(7);
@@ -42,11 +54,10 @@ f.right = h;
 //   1         1
 
 console.log(treeValueCount(a, 9)); // -> 0
-console.log(treeValueCount(a,  4)); // -> 3
+console.log(treeValueCount(a,  1)); // -> 4
+console.log(treeValueCount(a,  7)); // -> 2
 console.log(treeValueCount(null, 42)); // -> 0
-
 
 module.exports = {
   treeValueCount
 };
-

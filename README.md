@@ -46,4 +46,11 @@ Happy Coding y'all!
 - [x] 041-tree-min-value.js
 - [] 042-max-root-to-leaf-path-sum.js
 - [] 043-tree-path-finder.js
-- [] 044-tree-value-count.js
+- [x] 044-tree-value-count.js
+- [x] 045-how-high.js
+- [x] 046-bottom-right-value.js
+- [] 047-all-tree-paths.js
+- [] 048-tree-levels.js
+- [x] 049-level-averages.js
+- [x] 050-leaf-list.js
+- [] 
