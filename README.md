@@ -56,12 +56,16 @@ Happy Coding y'all!
 
 
 ### V_Graph
+##### Draw EVERY PROBLEM out by hand... JUST DO IT!
 - [x] 056-has-path.js
-- [] 057-undirected-path.js
+- [x] 057-undirected-path.js
 - [x] 058-connected-components-count.js
-- [] 059-largest-component.js
-- [] 060-shortest-path.js *draw this out*
-- [] 061-island-count.js
+- [x] 059-largest-component.js
+- [x] 060-shortest-path.js 
+- [x] 061-island-count.js
 - [x] 062-minimum-island.js
-- [] 063-closest-carrot.js
-- [] 064-longest-path.js
+- [x] 063-closest-carrot.js
+- [x] 064-longest-path.js
+- [x] 065-semesters-required.js
+
+- [x] 067-has-cycle.js

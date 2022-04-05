@@ -6,28 +6,40 @@ number of edges in the path, not the number of nodes. If there is no path
 between A and B, then return -1.
 */
 
-// 1. translate edge list into adjacency list
-// 2. let pathCount = Infinity;
-// 3. return pathCount;
-// 4. create a visited set;
-// 5. Loop through graph. For (let node in graph)....
-// 6. traverseGraph(graph, nodeA, nodeB, visited);
-
-// 7. Build helper function (graph, src, dst, visited);
-// 8. let currentCount = 1; 
-// 9. if src === dst, return currentCount
-// 9. const neighbors = graph[src];
-// 10. For let neighbor of neighbors
-// 11. recursive(graph, neighbor, dst, visited);
-// 12. return currentCount;
-
-
 // e = # of edges:
 // Time: O(e) b/c we traverse through each edge
 // Space: O(e) because we store each edge in a visited set (in memory)
 const shortestPath = (edges, nodeA, nodeB) => {
-
+  const graph = buildGraph(edges);
+  const visited = new Set();
+  const queue = [ [nodeA, 0] ];
+  while (queue.length > 0) {
+    const [node, distance] = queue.shift();
+    if (node === nodeB) return distance;
+    const neighbors = graph[node];
+    for (let neighbor of neighbors) {
+      if (!visited.has(neighbor)) {
+        visited.add(neighbor);
+        queue.push( [neighbor, distance + 1] )
+      }
+    }
+  }
+  return -1;
 }
+
+const buildGraph = (edges) => {
+  const graph = {};
+  for (let edge of edges) {
+    const [a, b] = edge;
+    if (!(a in graph)) graph[a] = [];
+    if (!(b in graph)) graph[b] = [];
+    graph[a].push(b);
+    graph[b].push(a);
+
+  }
+  return graph;
+}
+
 
 const edges0 = [
   ['w', 'x'],

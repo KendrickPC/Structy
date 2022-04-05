@@ -26,33 +26,33 @@ You may assume that the grid contains at least one island.
 
 
 const minimumIsland = (grid) => {
-  let smallestSize = Infinity;
   const visited = new Set();
-  for (let row=0; row<grid.length; row++) {
-    for (let col=0; col<grid[0].length; col++) {
-      const attempt = traverse2DArray(grid, row, col, visited);
-      if (attempt > 0 && attempt < smallestSize) smallestSize = attempt;
+  let min = Infinity;
+  for (let row=0; row<grid.length; row+=1) {
+    for (let col=0; col<grid[0].length; col+=1) {
+      const currentSize = traverseGrid(grid, row, col, visited);
+      if (currentSize < min && currentSize > 0) min = currentSize;
     }
   }
-  return smallestSize;
-};
+  return min;
+}
 
-const traverse2DArray = (grid, row, col, visited) => {
-  let size = 1;
+const traverseGrid = (grid, row, col, visited) => {
   const rowInBounds = 0 <= row && row < grid.length;
   const colInBounds = 0 <= col && col < grid[0].length;
   if (!rowInBounds || !colInBounds) return 0;
 
   if (grid[row][col] === 'W') return 0;
 
-  const currentPos = row + ',' + col;
-  if (visited.has(currentPos)) return 0;
-  visited.add(currentPos);
+  const position = row + ',' + col;
+  if (visited.has(position)) return 0;
+  visited.add(position);
 
-  size += traverse2DArray(grid, row-1, col, visited);
-  size += traverse2DArray(grid, row+1, col, visited);
-  size += traverse2DArray(grid, row, col-1, visited);
-  size += traverse2DArray(grid, row, col+1, visited);
+  let size = 1;
+  size += traverseGrid(grid, row-1, col, visited);
+  size += traverseGrid(grid, row+1, col, visited);
+  size += traverseGrid(grid, row, col-1, visited);
+  size += traverseGrid(grid, row, col+1, visited);
 
   return size;
 }

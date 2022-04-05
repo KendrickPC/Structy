@@ -5,19 +5,36 @@ a boolean indicating whether or not there exists a path between nodeA
 and nodeB.
 */
 
-// 1. Convert edge list into adjacency list
-// 2. Create a visited set;
-// 3. Loop through graph nodes...
-// 3. Create a helper function that traverses the graph with the visited set.
-// 4. In helper function, if src === dst, return true;
-// 5. Check visited set... if visited, return false;
-// 6. add current node to visited set.
-// 7. const neighbors = graph[src];
-// 8. Loop through neighbors
-
-
-const undirectedPath = (edges, src, dst) => {
+const undirectedPath = (edges, nodeA, nodeB) => {
+  const graph = buildGraph(edges);
+  const neighbors = graph[nodeA];
+  const visited = new Set();
+  if (traverseGraph(graph, nodeA, nodeB, visited) === true) return true;
+  return false;
   
+}
+
+const traverseGraph = (graph, src, dst, visited) => {
+  if (visited.has(src)) return false;
+  visited.add(src);
+  if (src === dst) return true;
+  const neighbors = graph[src];
+  for (let neighbor of neighbors) {
+    if (traverseGraph(graph, neighbor, dst, visited) === true) return true;
+  }
+  return false;
+}
+
+const buildGraph = (edges) => {
+  const graph = {};
+  for (let edge of edges) {
+    const [a, b] = edge;
+    if (!(a in graph)) graph[a] = [];
+    if (!(b in graph)) graph[b] = [];
+    graph[a].push(b);
+    graph[b].push(a);
+  }
+  return graph;
 }
 
 const edges0 = [

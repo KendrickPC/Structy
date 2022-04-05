@@ -4,33 +4,17 @@ undirected graph. The function should return the size of the largest connected
 component in the graph.
 */
 
-// 1. create a largestSize variable and set it to 0;
-// 2. Create a new visited set();
-// 3.  for (let node in graph) , do something:
-// 4. Inside for loop, create a helper function. 
-// 5. assign return of helper function to currentSize variable
-// 6. largestSize = Math.max(currentSize, largestSize)
-
-// 7. For helper function, take in graph, node, visited
-// 8. let runningSizeCount = 1;
-// 9. if visited.has(node), return 0;
-// 10. visited.add(node);
-// 11. const neighbors = graph[node];
-// 12. For (let neighbor of neighbors), do something...
-// 13. recursive call helperFunction(graph, neighbor, visited);
-// 14. Outside loop, return runningSizeCount;
-
 // n = # of nodes
 // e = # of edges
 // Time: O(e) Must traverse through every node. 
 // Space: O(n) for the set storing every node.
 
 const largestComponent = (graph) => {
-  let largestSize = 0;
   const visited = new Set();
+  let largestSize = 0;
   for (let node in graph) {
-    let sizeCount = traverseGraph(graph, node, visited);
-    if (largestSize < sizeCount) largestSize = sizeCount;
+    const currentSize = traverseGraph(graph, node, visited);
+    if (currentSize > largestSize) largestSize = currentSize;
   }
   return largestSize;
 }
@@ -38,14 +22,13 @@ const largestComponent = (graph) => {
 const traverseGraph = (graph, node, visited) => {
   if (visited.has(node)) return 0;
   visited.add(node);
-  let runningSizeCount = 1;
+  let size = 1;
   const neighbors = graph[node];
   for (let neighbor of neighbors) {
-    runningSizeCount += traverseGraph(graph, neighbor, visited);
+    size += traverseGraph(graph, neighbor, visited);
   }
-  return runningSizeCount;
+  return size;
 }
-
 
 console.log(largestComponent({
   0: ['8', '1', '5'],

@@ -5,54 +5,39 @@ of islands on the grid. An island is a vertically or horizontally connected
 region of land.
 */
 
-// 1. Create a visited set so we don't visit the same point in 2d array again.
-// 2. Create a total count let count = 0;
-// 3. for loop through grid = row;
-// 4. for loop through grid[0] = col;
-// 5. TraverseGraph(grid, row, col, visited);
 
-// 6. check in bounds, if not, return false;
-// 7. if (grid[row][col] === 'W' return false;
-
-// 8. current position = row + "," + col;
-// 9. if (visited.has(current Position)) return false;
-
-// 10. recursive calls to neighbors
-// 11. return true;
-
-
-
-// x. return count;
 
 const islandCount = (grid) => {
   const visited = new Set();
   let count = 0;
-  for (let row = 0; row < grid.length; row++) {
-    for (let col = 0; col < grid[0].length; col++) {
-      if (traverse2DArray(grid, row, col, visited) === true) count += 1;
+  for (let row=0; row<grid.length; row+=1) {
+    for (let col=0; col<grid[0].length; col+=1) {
+      if (traverseGrid(grid, row, col, visited) === true) count += 1;
     }
   }
   return count;
 };
 
-const traverse2DArray = (grid, row, col, visited) => {
+const traverseGrid = (grid, row, col, visited) => {
+  // return Boolean true/false
   const rowInBounds = 0 <= row && row < grid.length;
   const colInBounds = 0 <= col && col < grid[0].length;
   if (!rowInBounds || !colInBounds) return false;
 
   if (grid[row][col] === 'W') return false;
 
-  const currentPos = row + ',' + col;
-  if (visited.has(currentPos)) return false;
-  visited.add(currentPos);
+  const position = row + ',' + col;
+  if (visited.has(position)) return false;
+  visited.add(position);
 
-  traverse2DArray(grid, row-1, col, visited);
-  traverse2DArray(grid, row+1, col, visited);
-  traverse2DArray(grid, row, col-1, visited);
-  traverse2DArray(grid, row, col+1, visited);
+  traverseGrid(grid, row-1, col, visited);
+  traverseGrid(grid, row+1, col, visited);
+  traverseGrid(grid, row, col-1, visited);
+  traverseGrid(grid, row, col+1, visited);
 
   return true;
 }
+
 
 const grid0 = [
   ['W', 'L', 'W', 'W', 'W'],

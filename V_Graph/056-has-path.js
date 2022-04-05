@@ -5,15 +5,7 @@ return a boolean indicating whether or not there exists a directed path
 between the source and destination nodes.
 */
 
-// Note: No visited set is needed because this is a directed graph.
-// 1. Recursive approach. If src=== dst, return true;
-// 2. const neighbors = graph[src];
-// 3a. for (let neighbor of neighbors) 
-// 3b. hasPath(graph, neighbor, dst);
-// 4. return false (outside of for loop);
 
-// Time: O(n) because the worst case scenario is that we loop through every node in the graph.
-// Space: O(1) because this is a constant time lookup. No storage of memory needed.
 
 const hasPath = (graph, src, dst) => {
   if (src === dst) return true;

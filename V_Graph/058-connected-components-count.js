@@ -16,6 +16,7 @@ components within the graph.
 // 8. return count.
 
 
+
 const connectedComponentsCount = (graph) => {
   let count = 0;
   const visited = new Set();
@@ -23,13 +24,11 @@ const connectedComponentsCount = (graph) => {
     if (traverseGraph(graph, node, visited) === true) count += 1;
   }
   return count;
-};
+}
 
 const traverseGraph = (graph, node, visited) => {
-  // console.log(visited);
   if (visited.has(String(node))) return false;
   visited.add(String(node));
-
   const neighbors = graph[node];
   for (let neighbor of neighbors) {
     traverseGraph(graph, neighbor, visited);

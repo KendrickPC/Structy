@@ -5,9 +5,38 @@ within the graph. A path may start and end at any two nodes. The length of a
 path is considered the number of edges in the path, not the number of nodes.
 */
 
+// 1. create a distance object...
+// 2. find terminal nodes:
+// 3. Loop through graph again...
+// 4. Use helper function to store visited... base case:
+// return 1 + maxPath
+
 const longestPath = (graph) => {
-  return graph;
-};
+  const distance = {};
+  // find terminal nodes:
+  for (let node in graph) {
+    if (graph[node].length === 0) {
+      distance[node] = 0;
+    }
+  }
+  for (let node in graph) {
+    traverseGraph(graph, node, distance);
+  }
+  return Math.max(...Object.values(distance));
+}
+
+const traverseGraph = (graph, node, distance) => {
+  // base case:
+  if (node in distance) return distance[node];
+  let maxLength = 0;
+  const neighbors = graph[node];
+  for (let neighbor of neighbors) {
+    const attempt = traverseGraph(graph, neighbor, distance);
+    if (attempt > maxLength) maxLength = attempt;
+  }
+  distance[node] = 1 + maxLength;
+  return distance[node];
+}
 
 const graph0 = {
   a: ['c', 'b'],
