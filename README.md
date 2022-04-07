@@ -72,17 +72,19 @@ Happy Coding y'all!
 - [x] 068-prereqs-possible.js
 
 ### VI_Dynamic_Programming
-- [] 072-fib.js
+- [x] 072-fib.js
 - [x] 073-tribonacci.js
-- [] 074-sum-possible.js
-- [] 075-min-change.js
-- [] 076-count paths.js
-- [] 077-max-path-sum.js
-- [] 078-non-adjacent-sum.js
-- [] 079-summing-squares.js
+- [x] 074-sum-possible.js
+- [x] 075-min-change.js
+- [x] 076-count paths.js
+- [x] 077-max-path-sum.js
+- [x] 078-non-adjacent-sum.js
+- [x] 079-summing-squares.js
 - [] 080-counting-change.js
 - [] 081-array-stepper.js
-- [] 082-max-palin-subsequence.js
-- [] 083-overlap-subsequence.js
-- [] 084-can-concat.js
-- [] 085-quickest-concat.js
+- [x] 082-max-palin-subsequence.js
+- [x] 083-overlap-subsequence.js
+- [x] 084-can-concat.js
+- [x] 085-quickest-concat.js
+
+
