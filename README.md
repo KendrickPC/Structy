@@ -91,6 +91,13 @@ Happy Coding y'all!
 - [x] 089-paired-parentheses.js
 - [x] 090-befitting-brackets.js
 - [] 091-decompress-braces.js
-- [x] 092-nesting-score.js
+- [] 092-nesting-score.js
+
+### VIII_Exhaustive_Recursion
+- [x] 095-subsets.js
+- [x] 096-permutations.js
+- [x] 097-create-combinations.js
+- [] 098-parenthetical-possibilities.js
+- [] 099-substitute-synonyms.js
 
 
