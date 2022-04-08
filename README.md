@@ -87,4 +87,10 @@ Happy Coding y'all!
 - [x] 084-can-concat.js
 - [x] 085-quickest-concat.js
 
+### VII_Stack
+- [x] 089-paired-parentheses.js
+- [x] 090-befitting-brackets.js
+- [] 091-decompress-braces.js
+- [x] 092-nesting-score.js
+
 
