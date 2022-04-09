@@ -100,4 +100,6 @@ Happy Coding y'all!
 - [] 098-parenthetical-possibilities.js
 - [] 099-substitute-synonyms.js
 
-
+### IX_Mixed_Recall
+- [x] 102-linked-palindrome.js
+- [x] 103-middle-value.js
